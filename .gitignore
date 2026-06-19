@@ -1,4 +1,6 @@
 .gradle
+.gradle-user-home/
+.tmp-clone/
 **/build/
 !src/**/build/
 run/
@@ -24,4 +26,3 @@ gradle-app.setting
 
 # IDEA config
 .idea
-

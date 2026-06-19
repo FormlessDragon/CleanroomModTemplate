@@ -8,12 +8,12 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
+@Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION)
 public class ExampleMod {
 
-    public static final Logger LOGGER = LogManager.getLogger(Reference.MOD_NAME);
+    public static final Logger LOGGER = LogManager.getLogger(Tags.MOD_NAME);
 
-    @SidedProxy(modId = Reference.MOD_ID, clientSide = "com.example.modid.proxy.ClientProxy", serverSide = "com.example.modid.proxy.CommonProxy")
+    @SidedProxy(modId = Tags.MOD_ID, clientSide = "com.example.modid.proxy.ClientProxy", serverSide = "com.example.modid.proxy.CommonProxy")
     public static IProxy proxy;
     /**
      * <a href="https://cleanroommc.com/wiki/forge-mod-development/event#overview">
@@ -22,7 +22,7 @@ public class ExampleMod {
      */
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        LOGGER.info("Hello From {}!", Reference.MOD_NAME);
+        LOGGER.info("Hello From {}!", Tags.MOD_NAME);
         LOGGER.info("Proxy is {}", proxy);
         LOGGER.info("Language: {}", Minecraft.getMinecraft().getLanguageManager().getCurrentLanguage());
     }
