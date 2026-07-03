@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(EntityLivingBase.class)
 public class EntityLivingBaseMixin {
 
-    @Inject(method = "setCustomNameTag", at = @At("HEAD"))
-    private void example$setCustomNameTag(String name, CallbackInfo ci) {
+    @Inject(method = "setHealth", at = @At("HEAD"))
+    private void example$setHealth(float health, CallbackInfo ci) {
     }
 }
